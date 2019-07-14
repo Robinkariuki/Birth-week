@@ -13,18 +13,25 @@
         <P>The application generates your <em>AKAN NAME</em> after you fill in the form</p>
       </div>
 
-    <div class="form">
-      <form action="">
-        Date of birth:<br>
-        <input type="text" name="firstname" value="">
-        <br>
-        Gender:<br>
-        <input type="text" name="lastname" value="">
-        <br><br>
-        <input type="submit" value="Submit">
-      </form>
+  <form id="theform">
+    DATE OF BIRTH
+    <input type="date" id="dob" name="date of birth" />
 
-    </div>
+  </form>
+  <div class="form-check">
+
+    <input class="form-check-input" type="radio" name="personGender" id="femaleChecked" value="F" checked>
+     <label class="form-check-label" for="Radios1">
+       Female
+     </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="personGender" id="maleChecked" value="M">
+        <label class="form-check-label" for="Radios2">
+        Male
+      </div>
+      <button type="submit" class="btn btn-primary" onclick="akanName();">Submit</button>
+
+
 
 
 
