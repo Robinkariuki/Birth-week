@@ -1,5 +1,6 @@
 # {AKAN NAME GENERATOR}
 #### By **{List of contributors}**
+LIVE LINK:https://robinkariuki.github.io/Birth-week/
 ## Description
 {A web application that generates AKAN NAME of which are names derived from Ghanian culture you,feed the web application data : Date of birth and Gender the it generates the name }
 ## Setup/Installation Requirements
