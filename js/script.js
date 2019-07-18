@@ -1,34 +1,79 @@
-var century, year, month, date;
 
-document.getElementById('theform').onsubmit = function akanName() { console.log(document.getElementById('theform').value);
-var dob = document.getElementById('dob').value;
-alert('Your date of birth is ' + dob);
-var century = dob.slice(0,2);
-var year = dob.slice(2,4);
-var month = dob.slice(5,7);
-var date = dob.slice(8,10);
+var  InputBirthYear, InputBirthMonth, InputBirthDate;
 
+function myInput(){
 
+     InputBirthYear =document.getElementById("birthyear").value;
 
-var maleName = ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"];
+     InputBirthMonth = document.getElementById("birthmonth").value;
 
-var femaleName = ["Akosu", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Amna"];
+     InputBirthDate = document.getElementById("birthdate").value;
 
-var DD = ["Sunday", "Monday", "Tuesday", "Wensday", "Thursday", "Friday", "Sunday"];
+    var gender1 = document.getElementById("gender");
 
-var dayOfBirth = parseInt(((century / 4) - 2 * century - 1) + ((5 * year / 4)) + ((26 * (month + 1) / 10))) % 7;
-   if (gender === "Male") {
-       var mName = maleName[dayOfBirth - 1];
-       alert("Your Akhan Name is "+ mName);
-       document.getElementById("displayName").innerHTML =  "Your Akhan Name is "+ mName;
+    var gender2 = document.getElementById("gender2");
 
 
-       }
-       else if (gender === "Female") {
-           var Fname = femaleName[dayOfBirth -1]
-           var day = DD[dayOfBirth - 1]
-           document.getElementById("displayName").innerHTML = "Your Akhan Name is "+ fName;
-       }
+        var Malename = ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"];
 
-}
-akanName();
+        var Femalename = ["Akosu", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Amna"];
+
+        var DD = ["Sunday", "Monday", "Tuesday", "Wensday", "Thursday", "Friday", "Sunday"];
+
+
+
+
+        var century = parseInt(InputBirthYear.toString().slice(0, 2));
+
+        var birthyear = parseInt(InputBirthYear.toString().slice(2, 4));
+
+
+
+        var DayofBirth = parseInt(((century / 4) - 2 * century - 1) + ((5 * birthyear / 4)) + ((26 * (InputBirthMonth + 1) / 10))+ InputBirthDate) % 7;
+        var DayofBirth = Math.floor(DayofBirth);
+        console.log(DayofBirth);
+        var Mname = Malename[DayofBirth - 1];
+        var day = DD[DayofBirth -1];
+
+        var Fname = Femalename[DayofBirth -1];
+        var day = DD[DayofBirth - 1];
+
+
+
+
+        if (gender1.checked == true) {
+
+
+
+       document.getElementById("result").innerHTML=(" Since you were born on " + day + " Your name is " + Mname);
+
+        }else if (gender2.checked == true) {
+
+
+            document.getElementById("result").innerHTML=(" Since you were born on " + day + " Your name is " + Fname);
+        };
+
+        var ListofDays = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+
+        if(InputBirthMonth == 1 || InputBirthMonth > 2){
+            if(InputBirthDate > ListofDays[InputBirthMonth - 1]){
+                alert('invalid date');
+                return false;
+            };
+        };
+
+        if (InputBirthMonth == 2){
+            var leapyear = false;
+            if ((!(InputBirthYear % 4) && InputBirthYear % 100) || !(InputBirthYear % 400)){
+                leapyear = true;
+            }
+            if ((leapyear == true) && (InputBirthDate > 29)){
+                alert('invalid date format');
+                return false;
+            }
+        }
+
+    };
+
+
+myInput();

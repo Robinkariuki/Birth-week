@@ -1,59 +1,62 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/styles.css">
-  </head>
-  <body>
-    <div class="container">
-      <div class="jumbotron">
-        <h1> DESCRIPTION</h1>
-        <P>The application generates your <em>AKAN NAME</em> which originates from ghana, after you fill in the form</p>
-      </div>
 
-  <form id="theform">
-    DATE OF BIRTH
-    <input type="date" id="dob" name="date of birth" />
+</head>
+<body>
+    <div class="container bg-success">
 
-  </form>
-  <div class="form-check">
+        <div class="jumbotron bg-success">
 
-    <input class="form-check-input" type="radio" name="personGender" id="femaleChecked" value="F" checked>
-     <label class="form-check-label" for="Radios1">
-       Female
-     </div>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="personGender" id="maleChecked" value="M">
-        <label class="form-check-label" for="Radios2">
-        Male
-      </div>
-      <button type="submit" class="btn btn-primary" onclick="akanName();">Submit</button>
-      <div class="image">
-      <img src="images/flower.png" alt="flower"style=width="70px" height="100px">
-      <img src="images/flower.png" alt="flower"style=width="70px" height="100px">
-      <img src="images/flower.png" alt="flower"style=width="70px" height="100px">
-      <img src="images/flower.png" alt="flower"style=width="70px" height="100px">
-      <img src="images/flower.png" alt="flower"style=width="70px" height="100px">
-      <img src="images/flower.png" alt="flower"style=width="70px" height="100px">
-      <img src="images/flower.png" alt="flower"style=width="70px" height="100px">
-      <img src="images/flower.png" alt="flower"style=width="70px" height="100px">
-      <img src="images/flower.png" alt="flower"style=width="70px" height="100px">
-      <img src="images/flower.png" alt="flower"style=width="70px" height="100px">
-      </div>
+            <div class="hero">
+
+               <h1><strong>AKAN NAME GENERATOR</strong></h1>
+
+            </div>
+
+            <div class="forms-1">
+                <p>This application generates Akan names derived from Ghanian culture.</p>
 
 
 
-
-
-
-
-
+            </div>
+        </div>
     </div>
-    <script src="js/script.js">
-</script>
 
+    <div class="container">
+        <div class="jumbotron bg-secondary">
+            <div class="form">
+                    <p>Fill in all the forms please!!</p>
+                <label>Birth Year:</label>
+                <input type="year" class="form-control" id="birthyear">
 
-  </body>
+                <label>Birth Month:</label>
+                <input type="year" class="form-control" id="birthmonth" >
+
+                <label>Birth Date:</label>
+                <input type="year" class="form-control" id="birthdate" >
+
+                <label class="radio-label">Gender:</label>
+                <div class="check">
+
+                <input type="radio" class="radio-form"  value="male" name="radio" id="gender">Male
+                </div>
+                <div class="check">
+                        <input type="radio" class="radio-form" value="female" name="radio" id="gender2">Female
+                </div>
+                <div class="button">
+                    <input type="button" onclick="myInput();" value="submit">
+                </div>
+                <p id="result"></p>
+            </div>
+        </div>
+    </div>
+    <script src="js/script.js" type="text/javascript"></script>
+</body>
 </html>
