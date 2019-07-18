@@ -6,8 +6,7 @@ LIVE LINK:https://robinkariuki.github.io/Birth-week/
 ## Setup/Installation Requirements
 internet connection
 A device that can access the internet
-## Known Bugs
-Issues with the form connection with the java script
+
 ## Technologies Used
 JAVASCRIPT
 HTML
